@@ -9,6 +9,11 @@
 #include "vectors.h"
 #include "matrix.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 void extract_dir_vec3d_of_matrix(vec3d *out, const matrix4x4d *lookat);
 void extract_dir_vec3f_of_matrix(vec3f *out, const matrix4x4f *lookat);
 void extract_dir_vec4d_of_matrix(vec4d *out, const matrix4x4d *lookat);
@@ -33,5 +38,10 @@ void make_lookat_matrixd(matrix4x4d *out, const vec3d *pos, const vec3d *dir, co
 void make_lookat_matrixf(matrix4x4f *out, const vec3f *pos, const vec3f *dir, const vec3f *up);
 void make_orthographic_matrixd(matrix4x4d *out, double right, double left, double top, double bottom, double near, double far);
 void make_orthographic_matrixf(matrix4x4f *out, float right, float left, float top, float bottom, float near, float far);
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

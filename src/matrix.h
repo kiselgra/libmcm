@@ -7,6 +7,11 @@
 
 #include "vectors.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 typedef struct {
 	float col_major[16];
 } matrix4x4f;
@@ -37,5 +42,10 @@ float determinant_of_upper3x3_of_matrix4x4f(const matrix4x4f *mat);
 double determinant_of_upper3x3_of_matrix4x4d(const matrix4x4d *mat);
 void copy_matrix4x4f(matrix4x4f *out, const matrix4x4f *in);
 void copy_matrix4x4d(matrix4x4d *out, const matrix4x4d *in);
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

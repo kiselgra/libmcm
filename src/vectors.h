@@ -7,6 +7,10 @@
 #include "stdbool.h"
 #include "math.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 typedef struct {
 	double x;
@@ -136,5 +140,10 @@ void add_components_vec4d(vec4d *out, const vec4d *lhs, const vec4d *rhs);
 void add_components_vec4f(vec4f *out, const vec4f *lhs, const vec4f *rhs);
 void add_components_vec3d(vec3d *out, const vec3d *lhs, const vec3d *rhs);
 void add_components_vec3f(vec3f *out, const vec3f *lhs, const vec3f *rhs);
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
