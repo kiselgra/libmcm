@@ -1,0 +1,43 @@
+// example file
+/*!	\author Kai
+ * 	\mainpage @PACKAGE@ Description 
+ * 	\version @VERSION@
+ *
+ * 	@PACKAGE@ is a parser for a simple, C++'ish language to store a programs 
+ * 	configuration (or whatever else). 
+ *
+ * 	example config file:	
+ * 	\code
+ *  // scene config
+ *  models_in_scene=3;	// semicolon optional
+ *	
+ *	section model_1 {	// whitespace is ignored
+ *		name = "name";
+ *		obj_file = "blabla.obj";
+ *	}
+ *	materials	// keyword section optional 
+ *	{
+ *		materials=9;
+ *		section mat1 { ... }
+ *		section mat2 { ... }
+ *		...
+ *	}
+ * 	\endcode
+ *
+ * 	The configfile can be declared to use unique or none-unique names for the keys of key/value pairs and sections seperately.
+ *
+ * 	\code
+ *  // the following config file uses unique sections names (in each node), 
+ *	// but does not constrain the key names of key/value pairs.
+ * 	cfg::Configfile<cfg::MapTraits, cfg::ListTraits> configfile("my.cfg");
+ *
+ *  // use the config file:
+ * 	process(configfile.TopLevel());
+ * 	\endcode
+ *
+ *  Notes:
+ *  \li Quotes can be used in string values if they are escaped with \.
+ *  \li It is an error to have newlines in strings.
+ *
+ */
+
