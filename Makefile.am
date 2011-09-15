@@ -1,4 +1,3 @@
-
 SUBDIRS = src doc # lib-config-src # man
 
 .PHONY: doc
