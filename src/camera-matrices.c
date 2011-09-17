@@ -7,6 +7,102 @@
 #include "matrix.h"
 #include "vectors.h"
 
+void extract_dir_vec3d_of_matrix(vec3d *out, const matrix4x4d *lookat)
+{
+	make_vec3d(out, lookat->col_major[8], lookat->col_major[9], lookat->col_major[10]);
+
+}
+
+void extract_dir_vec3f_of_matrix(vec3f *out, const matrix4x4f *lookat)
+{
+	make_vec3f(out, lookat->col_major[8], lookat->col_major[9], lookat->col_major[10]);
+
+}
+
+void extract_dir_vec4d_of_matrix(vec4d *out, const matrix4x4d *lookat)
+{
+	make_vec4d(out, lookat->col_major[8], lookat->col_major[9], lookat->col_major[10], 0);
+
+}
+
+void extract_dir_vec4f_of_matrix(vec4f *out, const matrix4x4f *lookat)
+{
+	make_vec4f(out, lookat->col_major[8], lookat->col_major[9], lookat->col_major[10], 0);
+
+}
+
+void extract_pos_vec3d_of_matrix(vec3d *out, const matrix4x4d *lookat)
+{
+	make_vec3d(out, lookat->col_major[12], lookat->col_major[13], lookat->col_major[14]);
+
+}
+
+void extract_pos_vec3f_of_matrix(vec3f *out, const matrix4x4f *lookat)
+{
+	make_vec3f(out, lookat->col_major[12], lookat->col_major[13], lookat->col_major[14]);
+
+}
+
+void extract_pos_vec4d_of_matrix(vec4d *out, const matrix4x4d *lookat)
+{
+	make_vec4d(out, lookat->col_major[12], lookat->col_major[13], lookat->col_major[14], 1);
+
+}
+
+void extract_pos_vec4f_of_matrix(vec4f *out, const matrix4x4f *lookat)
+{
+	make_vec4f(out, lookat->col_major[12], lookat->col_major[13], lookat->col_major[14], 1);
+
+}
+
+void extract_right_vec3d_of_matrix(vec3d *out, const matrix4x4d *lookat)
+{
+	make_vec3d(out, lookat->col_major[0], lookat->col_major[1], lookat->col_major[2]);
+
+}
+
+void extract_right_vec3f_of_matrix(vec3f *out, const matrix4x4f *lookat)
+{
+	make_vec3f(out, lookat->col_major[0], lookat->col_major[1], lookat->col_major[2]);
+
+}
+
+void extract_right_vec4d_of_matrix(vec4d *out, const matrix4x4d *lookat)
+{
+	make_vec4d(out, lookat->col_major[0], lookat->col_major[1], lookat->col_major[2], 0);
+
+}
+
+void extract_right_vec4f_of_matrix(vec4f *out, const matrix4x4f *lookat)
+{
+	make_vec4f(out, lookat->col_major[0], lookat->col_major[1], lookat->col_major[2], 0);
+
+}
+
+void extract_up_vec3d_of_matrix(vec3d *out, const matrix4x4d *lookat)
+{
+	make_vec3d(out, lookat->col_major[4], lookat->col_major[5], lookat->col_major[6]);
+
+}
+
+void extract_up_vec3f_of_matrix(vec3f *out, const matrix4x4f *lookat)
+{
+	make_vec3f(out, lookat->col_major[4], lookat->col_major[5], lookat->col_major[6]);
+
+}
+
+void extract_up_vec4d_of_matrix(vec4d *out, const matrix4x4d *lookat)
+{
+	make_vec4d(out, lookat->col_major[4], lookat->col_major[5], lookat->col_major[6], 0);
+
+}
+
+void extract_up_vec4f_of_matrix(vec4f *out, const matrix4x4f *lookat)
+{
+	make_vec4f(out, lookat->col_major[4], lookat->col_major[5], lookat->col_major[6], 0);
+
+}
+
 void make_gl_viewing_matrixd(matrix4x4d *out, const matrix4x4d *lookat)
 {
 	out->col_major[((0 * 4) + 0)] = lookat->col_major[((0 * 4) + 0)];
