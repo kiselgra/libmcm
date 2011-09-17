@@ -249,7 +249,7 @@ void make_lookat_matrixf(matrix4x4f *out, const vec3f *pos, const vec3f *dir, co
 
 }
 
-void make_ortographic_matirxd(matrix4x4d *out, double right, double left, double top, double bottom, double near, double far)
+void make_orthographic_matirxd(matrix4x4d *out, double right, double left, double top, double bottom, double near, double far)
 {
 	double r_l = (right - left);
 	double t_b = (top - bottom);
@@ -265,7 +265,7 @@ void make_ortographic_matirxd(matrix4x4d *out, double right, double left, double
 
 }
 
-void make_ortographic_matirxf(matrix4x4f *out, float right, float left, float top, float bottom, float near, float far)
+void make_orthographic_matirxf(matrix4x4f *out, float right, float left, float top, float bottom, float near, float far)
 {
 	float r_l = (right - left);
 	float t_b = (top - bottom);
