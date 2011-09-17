@@ -258,7 +258,6 @@ void make_orthographic_matrixd(matrix4x4d *out, double right, double left, doubl
 	out->col_major[((0 * 4) + 0)] = (2 / r_l);
 	out->col_major[((1 * 4) + 1)] = (2 / t_b);
 	out->col_major[((2 * 4) + 2)] = (2 / f_n);
-	out->col_major[((3 * 4) + 3)] = 0;
 	out->col_major[((3 * 4) + 0)] = -((right + left) / r_l);
 	out->col_major[((3 * 4) + 1)] = -((top + bottom) / t_b);
 	out->col_major[((3 * 4) + 2)] = -((far + near) / f_n);
@@ -274,7 +273,6 @@ void make_orthographic_matrixf(matrix4x4f *out, float right, float left, float t
 	out->col_major[((0 * 4) + 0)] = (2 / r_l);
 	out->col_major[((1 * 4) + 1)] = (2 / t_b);
 	out->col_major[((2 * 4) + 2)] = (2 / f_n);
-	out->col_major[((3 * 4) + 3)] = 0;
 	out->col_major[((3 * 4) + 0)] = -((right + left) / r_l);
 	out->col_major[((3 * 4) + 1)] = -((top + bottom) / t_b);
 	out->col_major[((3 * 4) + 2)] = -((far + near) / f_n);
