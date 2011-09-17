@@ -31,7 +31,7 @@ void make_projection_matrixd(matrix4x4d *out, double fovy_degree, double aspect,
 void make_projection_matrixf(matrix4x4f *out, float fovy_degree, float aspect, float near, float far);
 void make_lookat_matrixd(matrix4x4d *out, const vec3d *pos, const vec3d *dir, const vec3d *up);
 void make_lookat_matrixf(matrix4x4f *out, const vec3f *pos, const vec3f *dir, const vec3f *up);
-void make_orthographic_matirxd(matrix4x4d *out, double right, double left, double top, double bottom, double near, double far);
-void make_orthographic_matirxf(matrix4x4f *out, float right, float left, float top, float bottom, float near, float far);
+void make_orthographic_matrixd(matrix4x4d *out, double right, double left, double top, double bottom, double near, double far);
+void make_orthographic_matrixf(matrix4x4f *out, float right, float left, float top, float bottom, float near, float far);
 
 #endif
