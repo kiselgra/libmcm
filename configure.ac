@@ -20,6 +20,7 @@ AC_PROG_CC_C99
 
 # when building libraries
 AC_PROG_LIBTOOL
+AC_PROG_RANLIB
 
 # Checks for libraries.
 AC_CHECK_LIB([m],[cos])
