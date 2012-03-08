@@ -111,16 +111,22 @@ void make_scale_matrix4x4f(matrix4x4f *mat, const vec3f *scale)
 	mat->col_major[((1 * 4) + 1)] = scale->y;
 	mat->col_major[((2 * 4) + 2)] = scale->z;
 	mat->col_major[((3 * 4) + 3)] = 1;
-	mat->col_major[((1 * 4) + 0)] = 0;
-	mat->col_major[((2 * 4) + 0)] = 0;
-	mat->col_major[((3 * 4) + 0)] = 0;
-	mat->col_major[((0 * 4) + 1)] = 0;
-	mat->col_major[((2 * 4) + 1)] = 0;
-	mat->col_major[((3 * 4) + 1)] = 0;
-	mat->col_major[((0 * 4) + 3)] = 0;
-	mat->col_major[((1 * 4) + 3)] = 0;
-	mat->col_major[((3 * 4) + 3)] = 0;
 
+	mat->col_major[((0 * 4) + 1)] = 0;
+	mat->col_major[((0 * 4) + 2)] = 0;
+	mat->col_major[((0 * 4) + 3)] = 0;
+
+	mat->col_major[((1 * 4) + 0)] = 0;
+	mat->col_major[((1 * 4) + 2)] = 0;
+	mat->col_major[((1 * 4) + 3)] = 0;
+
+	mat->col_major[((2 * 4) + 0)] = 0;
+	mat->col_major[((2 * 4) + 1)] = 0;
+	mat->col_major[((2 * 4) + 3)] = 0;
+	
+	mat->col_major[((3 * 4) + 0)] = 0;
+	mat->col_major[((3 * 4) + 1)] = 0;
+	mat->col_major[((3 * 4) + 2)] = 0;
 }
 
 void make_scale_matrix4x4d(matrix4x4d *mat, const vec3d *scale)
@@ -129,16 +135,22 @@ void make_scale_matrix4x4d(matrix4x4d *mat, const vec3d *scale)
 	mat->col_major[((1 * 4) + 1)] = scale->y;
 	mat->col_major[((2 * 4) + 2)] = scale->z;
 	mat->col_major[((3 * 4) + 3)] = 1;
-	mat->col_major[((1 * 4) + 0)] = 0;
-	mat->col_major[((2 * 4) + 0)] = 0;
-	mat->col_major[((3 * 4) + 0)] = 0;
+		
 	mat->col_major[((0 * 4) + 1)] = 0;
-	mat->col_major[((2 * 4) + 1)] = 0;
-	mat->col_major[((3 * 4) + 1)] = 0;
+	mat->col_major[((0 * 4) + 2)] = 0;
 	mat->col_major[((0 * 4) + 3)] = 0;
-	mat->col_major[((1 * 4) + 3)] = 0;
-	mat->col_major[((3 * 4) + 3)] = 0;
 
+	mat->col_major[((1 * 4) + 0)] = 0;
+	mat->col_major[((1 * 4) + 2)] = 0;
+	mat->col_major[((1 * 4) + 3)] = 0;
+
+	mat->col_major[((2 * 4) + 0)] = 0;
+	mat->col_major[((2 * 4) + 1)] = 0;
+	mat->col_major[((2 * 4) + 3)] = 0;
+	
+	mat->col_major[((3 * 4) + 0)] = 0;
+	mat->col_major[((3 * 4) + 1)] = 0;
+	mat->col_major[((3 * 4) + 2)] = 0;
 }
 
 void make_rotation_matrix4x4f(matrix4x4f *mat, const vec3f *axis, float angle_in_rad)
