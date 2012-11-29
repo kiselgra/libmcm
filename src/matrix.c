@@ -107,37 +107,43 @@ void make_unit_matrix4x4d(matrix4x4d *mat)
 
 void make_scale_matrix4x4f(matrix4x4f *mat, const vec3f *scale)
 {
-	mat->col_major[((0 * 4) + 0)] = scale->x;
-	mat->col_major[((1 * 4) + 1)] = scale->y;
-	mat->col_major[((2 * 4) + 2)] = scale->z;
-	mat->col_major[((3 * 4) + 3)] = 1;
-	mat->col_major[((1 * 4) + 0)] = 0;
-	mat->col_major[((2 * 4) + 0)] = 0;
-	mat->col_major[((3 * 4) + 0)] = 0;
-	mat->col_major[((0 * 4) + 1)] = 0;
-	mat->col_major[((2 * 4) + 1)] = 0;
-	mat->col_major[((3 * 4) + 1)] = 0;
-	mat->col_major[((0 * 4) + 3)] = 0;
-	mat->col_major[((1 * 4) + 3)] = 0;
-	mat->col_major[((3 * 4) + 3)] = 0;
+	mat->col_major[0] = scale->x;
+	mat->col_major[1] = 0;
+	mat->col_major[2] = 0;
+	mat->col_major[3] = 0;
+	mat->col_major[4] = 0;
+	mat->col_major[5] = scale->y;
+	mat->col_major[6] = 0;
+	mat->col_major[7] = 0;
+	mat->col_major[8] = 0;
+	mat->col_major[9] = 0;
+	mat->col_major[10] = scale->z;
+	mat->col_major[11] = 0;
+	mat->col_major[12] = 0;
+	mat->col_major[13] = 0;
+	mat->col_major[14] = 0;
+	mat->col_major[15] = 1;
 
 }
 
 void make_scale_matrix4x4d(matrix4x4d *mat, const vec3d *scale)
 {
-	mat->col_major[((0 * 4) + 0)] = scale->x;
-	mat->col_major[((1 * 4) + 1)] = scale->y;
-	mat->col_major[((2 * 4) + 2)] = scale->z;
-	mat->col_major[((3 * 4) + 3)] = 1;
-	mat->col_major[((1 * 4) + 0)] = 0;
-	mat->col_major[((2 * 4) + 0)] = 0;
-	mat->col_major[((3 * 4) + 0)] = 0;
-	mat->col_major[((0 * 4) + 1)] = 0;
-	mat->col_major[((2 * 4) + 1)] = 0;
-	mat->col_major[((3 * 4) + 1)] = 0;
-	mat->col_major[((0 * 4) + 3)] = 0;
-	mat->col_major[((1 * 4) + 3)] = 0;
-	mat->col_major[((3 * 4) + 3)] = 0;
+	mat->col_major[0] = scale->x;
+	mat->col_major[1] = 0;
+	mat->col_major[2] = 0;
+	mat->col_major[3] = 0;
+	mat->col_major[4] = 0;
+	mat->col_major[5] = scale->y;
+	mat->col_major[6] = 0;
+	mat->col_major[7] = 0;
+	mat->col_major[8] = 0;
+	mat->col_major[9] = 0;
+	mat->col_major[10] = scale->z;
+	mat->col_major[11] = 0;
+	mat->col_major[12] = 0;
+	mat->col_major[13] = 0;
+	mat->col_major[14] = 0;
+	mat->col_major[15] = 1;
 
 }
 
