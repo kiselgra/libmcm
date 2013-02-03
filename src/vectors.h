@@ -39,6 +39,13 @@ typedef struct {
 
 
 typedef struct {
+	int x;
+	int y;
+	int z;
+} vec3i;
+
+
+typedef struct {
 	double x;
 	double y;
 	double z;
