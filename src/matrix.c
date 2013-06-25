@@ -322,7 +322,7 @@ void invert_matrix4x4d(matrix4x4d *out, const matrix4x4d *in)
 bool equal_matrices_under_eps4x4f(const matrix4x4f *lhs, const matrix4x4f *rhs, float eps)
 {
 	for (int i = 0; (i < 16); ++i) {
-		if ((fabs(lhs->col_major[i]) - fabs(rhs->col_major[i])) > eps)
+		if ((fabs(lhs->col_major[i] - rhs->col_major[i])) > eps)
 			return false;
 	}
 	return true;
@@ -332,7 +332,7 @@ bool equal_matrices_under_eps4x4f(const matrix4x4f *lhs, const matrix4x4f *rhs, 
 bool equal_matrices_under_eps4x4d(const matrix4x4d *lhs, const matrix4x4d *rhs, double eps)
 {
 	for (int i = 0; (i < 16); ++i) {
-		if ((fabs(lhs->col_major[i]) - fabs(rhs->col_major[i])) > eps)
+		if ((fabs(lhs->col_major[i] - rhs->col_major[i])) > eps)
 			return false;
 	}
 	return true;
