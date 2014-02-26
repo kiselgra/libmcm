@@ -3,6 +3,7 @@
  */
 
 #include "matrix.h"
+#include <math.h>
 
 
 void transpose_matrix4x4f(matrix4x4f *out, const matrix4x4f *in)

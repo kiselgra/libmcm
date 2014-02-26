@@ -13,7 +13,7 @@ TESTS = $(check_PROGRAMS)
 # AM_LFLAGS = -P__lex_prefix__ -o lex.yy.c
 
 library_includedir = $(includedir)/$(PACKAGE)-$(VERSION)
-library_include_HEADERS = libmcm.h vectors.h matrix.h camera-matrices.h
+library_include_HEADERS = libmcm.h vectors.h matrix.h camera-matrices.h operators.h
 
 # setting c++ flags:
 # AM_CXXFLAGS = -Wall -ansi -pedantic -ggdb -pg

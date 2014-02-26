@@ -3,6 +3,7 @@
  */
 
 #include "vectors.h"
+#include <math.h>
 
 
 void cross_vec3d(vec3d *out, const vec3d *lhs, const vec3d *rhs)

@@ -4,60 +4,100 @@
 
 #ifndef __CGEN_vectors_H__
 #define __CGEN_vectors_H__
-#include "stdbool.h"
-#include "math.h"
+
+#ifndef __cplusplus
+#include <stdbool.h>
+#endif
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 
-typedef struct {
+typedef struct vec2d {
 	double x;
 	double y;
+#ifdef __cplusplus
+    vec2d() {}
+    vec2d(double x, double y) : x(x), y(y) {}
+#endif
 } vec2d;
 
 
-typedef struct {
+typedef struct vec2f {
 	float x;
 	float y;
+#ifdef __cplusplus
+    vec2f() {}
+    vec2f(float x, float y) : x(x), y(y) {}
+#endif
 } vec2f;
 
 
-typedef struct {
+typedef struct vec2i {
+	int x;
+	int y;
+#ifdef __cplusplus
+    vec2i() {}
+    vec2i(int x, int y) : x(x), y(y) {}
+#endif
+} vec2i;
+
+
+typedef struct vec3d {
 	double x;
 	double y;
 	double z;
+#ifdef __cplusplus
+    vec3d() {}
+    vec3d(double x, double y, double z) : x(x), y(y), z(z) {}
+#endif
 } vec3d;
 
 
-typedef struct {
+typedef struct vec3f {
 	float x;
 	float y;
 	float z;
+#ifdef __cplusplus
+    vec3f() {}
+    vec3f(float x, float y, float z) : x(x), y(y), z(z) {}
+#endif
 } vec3f;
 
 
-typedef struct {
+typedef struct vec3i {
 	int x;
 	int y;
 	int z;
+#ifdef __cplusplus
+    vec3i() {}
+    vec3i(int x, int y, int z) : x(x), y(y), z(z) {}
+#endif
 } vec3i;
 
 
-typedef struct {
+typedef struct vec4d {
 	double x;
 	double y;
 	double z;
 	double w;
+#ifdef __cplusplus
+    vec4d() {}
+    vec4d(double x, double y, double z, double w) : x(x), y(y), z(z), w(w) {}
+#endif
 } vec4d;
 
 
-typedef struct {
+typedef struct vec4f {
 	float x;
 	float y;
 	float z;
 	float w;
+#ifdef __cplusplus
+    vec4f() {}
+    vec4f(float x, float y, float z, float w) : x(x), y(y), z(z), w(w) {}
+#endif
 } vec4f;
 
 
@@ -151,6 +191,10 @@ void add_components_vec3f(vec3f *out, const vec3f *lhs, const vec3f *rhs);
 
 #ifdef __cplusplus
 }
+
+#include "operators.h"
+
 #endif
 
 #endif
+

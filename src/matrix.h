@@ -46,6 +46,78 @@ void copy_matrix4x4d(matrix4x4d *out, const matrix4x4d *in);
 
 #ifdef __cplusplus
 }
+
+
+/********************************* OPERATORS FOR MAT4F *********************************/
+inline vec4f operator*(const matrix4x4f &lhs, const vec4f &rhs) {
+	vec4f out;
+	multiply_matrix4x4f_vec4f(&out, &lhs, &rhs);
+	
+	return out;
+}
+
+inline matrix4x4f operator*(const matrix4x4f &lhs, const matrix4x4f &rhs) {
+	matrix4x4f out;
+	multiply_matrices4x4f(&out, &lhs, &rhs);
+	
+	return out;
+}
+
+inline bool operator==(const matrix4x4f &lhs, const matrix4x4f &rhs) {
+	return equal_matrices_under_eps4x4f(&lhs, &rhs, LIBMCM_EPS_FLOAT);
+}
+
+inline std::ostream& operator<<(std::ostream &out, const matrix4x4f &mat) {
+	const unsigned int dim = 4;
+	
+	for (unsigned int i = 0; i < dim; ++i) {
+		out << "[";
+		for (unsigned int j = 0; j < dim; ++j) {
+			out << mat.col_major[j * 4 + i];
+			if (j < 3) out << "\t";
+		}
+		out << "]";
+		
+		if (i < 3) out << std::endl;
+	}
+	
+    return out;
+}
+
+
+/********************************* OPERATORS FOR MAT4D *********************************/
+inline vec4d operator*(const matrix4x4d &lhs, const vec4d &rhs) {
+	vec4d out;
+	multiply_matrix4x4d_vec4d(&out, &lhs, &rhs);
+	
+	return out;
+}
+
+inline matrix4x4d operator*(const matrix4x4d &lhs, const matrix4x4d &rhs) {
+	matrix4x4d out;
+	multiply_matrices4x4d(&out, &lhs, &rhs);
+	
+	return out;
+}
+
+inline bool operator==(const matrix4x4d &lhs, const matrix4x4d &rhs) {
+	return equal_matrices_under_eps4x4d(&lhs, &rhs, LIBMCM_EPS_DOUBLE);
+}
+
+inline std::ostream& operator<<(std::ostream &out, const matrix4x4d &mat) {
+	const unsigned int dim = 4;
+	
+	for (unsigned int i = 0; i < dim; ++i) {
+		out << "[";
+		for (unsigned int j = 0; j < dim; ++j) {
+			out << mat.col_major[j * 4 + i] << "\t";
+		}
+		out << "]" << std::endl;
+	}
+	
+    return out;
+}
+
 #endif
 
 #endif

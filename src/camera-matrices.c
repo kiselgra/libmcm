@@ -6,6 +6,7 @@
 
 #include "matrix.h"
 #include "vectors.h"
+#include <math.h>
 
 void extract_dir_vec3d_of_matrix(vec3d *out, const matrix4x4d *lookat)
 {

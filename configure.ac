@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.61)
-AC_INIT([libmcm], [0.0.1], [((lambda (x y z) (string-append x "@" y "." z ".org")) "stuff" "projects" "selgrad")])
+AC_INIT([libmcm], [0.0.1], [kai.selgrad@cs.fau.de])
 AM_INIT_AUTOMAKE
 
 # name one of your source files here
