@@ -88,6 +88,17 @@ typedef struct vec4d {
 #endif
 } vec4d;
 
+typedef struct vec4i {
+	int x;
+	int y;
+	int z;
+	int w;
+#ifdef __cplusplus
+    vec4i() {}
+    vec4i(int x, int y, int z, int w) : x(x), y(y), z(z), w(w) {}
+#endif
+} vec4i;
+
 
 typedef struct vec4f {
 	float x;
